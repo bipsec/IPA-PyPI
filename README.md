@@ -56,7 +56,7 @@ print(translated_ipa)  # Output: "mɔharaɟ"
 The data used by the BanglaToIPA package is sourced from private annotated corpus for bengali letters and their appropriate form of IPA. It is carefully curated and validated from multiple resources before training and generating the model for transcribing IPA for bengali words.
 
 ## Contributing
-If you find any issues or would like to contribute to the BanglaDictionary package, please feel free to open an issue or submit a pull request on the GitHub repository. Feel free to create issues to contact.
+If you find any issues or would like to contribute to the BanglaToIPA package, please feel free to open an issue or submit a pull request on the GitHub repository. Feel free to create issues to contact.
 
 
 ## License
