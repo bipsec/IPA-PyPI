@@ -46,9 +46,6 @@ ipa = BanglaIPATranslator()
 # Get the meaning of a word
 translated_ipa = ipa.translate("মহারাজ")
 print(translated_ipa)  # Output: "mɔharaɟ"
-
-
-
 ```
 
 ## Data Source
