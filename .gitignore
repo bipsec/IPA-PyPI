@@ -14,7 +14,6 @@ words.txt
 
 .idea
 __pycache__
-/data/
 /tools/
 ./.idea
 build
