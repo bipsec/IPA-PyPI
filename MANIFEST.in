@@ -1,5 +1,6 @@
 include README.md
 include LICENSE
 include requirements.txt
-recursive-include model *
-recursive-include data *
+recursive-include ipa/data *
+recursive-include ipa/model *
+

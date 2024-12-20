@@ -1,11 +1,11 @@
 import pathlib
 import pandas as pd
 import torch
+import warnings
 import random
 from torch import nn
 from torchtext import data as data
 from torchtext.data import Field
-import warnings
 
 # Suppress all warnings
 warnings.filterwarnings("ignore")
@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 # Suppress only UserWarnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
-ipa_voacab = pathlib.Path(__file__).absolute().parents[1] / "data" / "ipa_vocab_data.csv"
+ipa_vocab = pathlib.Path(__file__).absolute().parents[1] / "data" / "ipa_vocab_data.csv"
 path = pathlib.Path(__file__).absolute().parents[1] / "model/ipa_model.pth"
 
 if torch.cuda.is_available():

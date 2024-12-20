@@ -70,7 +70,7 @@ with open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 # Setting up the package
 setup(
     name="bangla-ipa",
-    version="0.4",
+    version="0.5",
     author="Biplab Kumar Sarkar, Afrar Jahin, Asif Shusmit",
     author_email="bip.sec22@gmail.com",
     description="A Python module for generating Bangla IPA transliterations.",
@@ -81,6 +81,9 @@ setup(
     packages=find_packages(),
     install_requires=requirements,
     include_package_data=True,
+    package_data={
+        "ipa": ["data/*", "model/*"],
+    },
     keywords=[
         "python", "IPA", "Bangla IPA", "International Phonetic Alphabet",
         "Bangla linguistics", "transliteration"
