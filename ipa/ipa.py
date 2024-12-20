@@ -5,6 +5,13 @@ import random
 from torch import nn
 from torchtext import data as data
 from torchtext.data import Field
+import warnings
+
+# Suppress all warnings
+warnings.filterwarnings("ignore")
+
+# Suppress only UserWarnings
+warnings.filterwarnings("ignore", category=UserWarning)
 
 ipa_voacab = pathlib.Path(__file__).absolute().parents[1] / "data" / "ipa_vocab_data.csv"
 path = pathlib.Path(__file__).absolute().parents[1] / "model/ipa_model.pth"

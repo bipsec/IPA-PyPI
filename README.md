@@ -5,24 +5,24 @@ BanglaToIPA is a Python package designed to transcribe Bengali words into the In
 
 You can install the BanglaToIPA package using pip:
 
-```python
+```shell
 pip install bangla-ipa
 ```
 
 ## File Structure
 ```sh
 IPA/
-│   ├── ipa/
-│   │   ├── __init__.py
-│   │   ├── ipa.py
-│   ├── model/
-│   │   ├── ipa_model.pth
-│   ├── data/
+├── ipa/
+│   ├── __init__.py
+│   ├── ipa.py
+├── model/
+│   ├── ipa_model.pth
+├── data/
 │   │   ├── ipa_vocab_data
-│   ├── script/
+├── script/
 │   │   ├── __init__.py
 │   │   ├── translator.py
-│   ├── tests/
+├── tests/
 │   │   ├── __init__.py
 │   │   ├── test_bangla_ipa.py
 ├── __init__.py
@@ -44,8 +44,7 @@ from ipa.ipa import BanglaIPATranslator
 ipa = BanglaIPATranslator()
 
 # Get the meaning of a word
-translated_ipa = ipa.translate("মহারাজ")
-print(translated_ipa)  # Output: "mɔharaɟ"
+translated_ipa = ipa.translate("মহারাজ") # Output: "mɔharaɟ"
 ```
 
 ## Data Source
