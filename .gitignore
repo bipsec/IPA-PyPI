@@ -17,3 +17,6 @@ __pycache__
 /data/
 /tools/
 ./.idea
+build
+dist
+test_env

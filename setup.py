@@ -1,32 +1,33 @@
 import os
-import chardet
+# import chardet
 from setuptools import setup, find_packages
 
-def detect_file_encoding(filename):
-    with open(filename, "rb") as f:
-        result = chardet.detect(f.read())
-    return result
 
-
-encoding_info = detect_file_encoding("requirements.txt")
-print(encoding_info)
-
-
-def convert_to_utf8(filename):
-    with open(filename, "rb") as f:
-        content = f.read()
-
-    encoding = chardet.detect(content)["encoding"]
-    if encoding != "utf-8":
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write(content.decode(encoding))
-
-
-convert_to_utf8("requirements.txt")
+# def detect_file_encoding(filename):
+#     with open(filename, "rb") as f:
+#         result = chardet.detect(f.read())
+#     return result
+#
+#
+# encoding_info = detect_file_encoding("requirements.txt")
+# print(encoding_info)
+#
+#
+# def convert_to_utf8(filename):
+#     with open(filename, "rb") as f:
+#         content = f.read()
+#
+#     encoding = chardet.detect(content)["encoding"]
+#     if encoding != "utf-8":
+#         with open(filename, "w", encoding="utf-8") as f:
+#             f.write(content.decode(encoding))
+#
+#
+# convert_to_utf8("requirements.txt")
 
 
 def parse_requirements_safe(filename):
-    with open(filename, "r", encoding="utf-8-sig") as file:
+    with open(filename, "r", encoding="utf-8") as file:
         requirements = []
         for line in file:
             line = line.strip()
@@ -70,7 +71,7 @@ with open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 setup(
     name="bangla-ipa",
     version="0.1",
-    author="Your Name",
+    author="Biplab Kumar Sarkar, Afrar Jahin, Asif Shusmit",
     author_email="bip.sec22@gmail.com",
     description="A Python module for generating Bangla IPA transliterations.",
     long_description=long_description,
